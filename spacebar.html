@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+
+<html>
+
+    <body>
+
+        <head>
+
+            <title>Spacebar Clicker</title>
+            <link rel="stylesheet" href="spacebar.css">
+    
+            <script>
+
+                var counter = 0;
+                var superModeN = "";
+                var superModeC = 0;
+                
+                document.body.onkeydown = function(addPressGod) {
+                    
+                    if(addPressGod.keyCode == 32) {
+                        if(superModeC === 7) {
+                            counter = counter + 1;
+                            document.getElementById("spacebarCount").innerHTML = counter;
+                        }
+                    }
+                }
+
+                document.body.onkeyup = function(addPress) {
+                    
+                    if(addPress.keyCode == 32) {
+                        counter = counter + 1;
+                        document.getElementById("spacebarCount").innerHTML = counter;
+                    }
+                    
+                    if(addPress.keyCode == 77) {
+                        if(superModeC === 0) {
+                            superModeN = "m";
+                            superModeC = 1;
+                            document.getElementById("superMode").innerHTML = superModeN;
+                        }
+                    }
+                    
+                    if(addPress.keyCode == 65) {
+                        if(superModeC === 1) {
+                            superModeN = "ma";
+                            superModeC = 2;
+                            document.getElementById("superMode").innerHTML = superModeN;
+                        }
+                    }
+                    
+                    if(addPress.keyCode == 84) {
+                        if(superModeC === 2) {
+                            superModeN = "mat";
+                            superModeC = 3;
+                            document.getElementById("superMode").innerHTML = superModeN;
+                            return;
+                        }
+                    }
+                    
+                    if(addPress.keyCode == 84) {
+                        if(superModeC === 3) {
+                            superModeN = "matt";
+                            superModeC = 4;
+                            document.getElementById("superMode").innerHTML = superModeN;
+                        }
+                    }
+                    
+                    if(addPress.keyCode == 72) {
+                        if(superModeC === 4) {
+                            superModeN = "matth";
+                            superModeC = 5;
+                            document.getElementById("superMode").innerHTML = superModeN;
+                        }
+                    }
+                    
+                    if(addPress.keyCode == 69) {
+                        if(superModeC === 5) {
+                            superModeN = "matthe";
+                            superModeC = 6;
+                            document.getElementById("superMode").innerHTML = superModeN;
+                        }
+                    }
+                    
+                    if(addPress.keyCode == 87) {
+                        if(superModeC === 6) {
+                            superModeN = ":MATTHEW: God Mode";
+                            superModeC = 7;
+                            document.getElementById("superMode").innerHTML = superModeN;
+                        }
+                    }
+                }
+
+                function reset() {
+                    location.reload();
+                }
+                
+            </script>
+        
+        </head>
+
+        <h1 id="spacebarCount">0</h1>
+        <h5 id="superMode"></h5><br><br>
+        <button onclick="reset()">Reset</button>
+        <p>This is a Yay Company website made with code by Matthew West! Thank you for coming to my weird website. This website lets you track how many times have you hit the spacebar!! You can challenge you friends and no, I'm not kidding that's how it goes!</p>
+
+    </body>
+    
+</html>
